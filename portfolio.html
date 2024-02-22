@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        /* Add some basic styling for better presentation */
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        section {
+            display: none; /* Initially hide sections */
+            margin-bottom: 20px;
+        }
+
+        section.active {
+            display: block; /* Display the active section */
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="#" onclick="showSection('home')">Home</a>
+    <a href="#" onclick="showSection('about')">About</a>
+    <a href="#" onclick="showSection('projects')">Projects</a>
+</nav>
+
+<section id="home" class="active">
+    <h2>Home</h2>
+    <p>Welcome to my portfolio website! Learn more about me and my projects.</p>
+</section>
+
+<section id="about">
+    <h2>About</h2>
+    <p>I am a passionate web developer with a strong background in HTML, CSS, and JavaScript.</p>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <p>Check out some of my projects:</p>
+    <ul>
+        <li><a href="https://sevich-kah.github.io/Denis-Kah.github.io/">Project 1</a></li>
+        <li><a href="https://sevich-kah.github.io/calc.github.io/">Project 2</a></li>
+        <li><a href="https://sevich-kah.github.io/info.github.io/">Project 3</a></li>
+    </ul>
+    <p>These are still ongoing projects</p>
+</section>
+
+<script>
+    function showSection(sectionId) {
+        // Hide all sections
+        document.querySelectorAll('section').forEach(function (section) {
+            section.classList.remove('active');
+        });
+
+        // Show the selected section
+        document.getElementById(sectionId).classList.add('active');
+    }
+</script>
+
+</body>
+</html>
